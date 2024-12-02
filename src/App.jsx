@@ -3,14 +3,10 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import LogIn from "./pages/Login";
 
-const Home = () => {
-  return (
-    <>
-      <h1>Home</h1>
-    </>
-  );
-};
+
 
 const About = () => {
   return (
@@ -26,7 +22,7 @@ function App() {
   return (
     <Routes>
       <Route exact path="/" element={<Home />} />
-      <Route exact path="/about" element={<About />} />
+      <Route exact path="/login" element={<LogIn />} />
     </Routes>
   );
 }
