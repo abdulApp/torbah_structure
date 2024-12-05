@@ -87,7 +87,7 @@ export default function SmartIrrigation() {
             نسبة الفيتامينات
           </h1>
         </div>
-        <div className="w-1/3 flex flex-col gap-3 justify-center items-center px-3 py-6 border rounded-lg bg-white">
+        <div className="w-1/3 h-[320px] flex flex-col gap-3 justify-center items-center px-3 py-6 border rounded-lg bg-white">
           <h1 className="text-center text-xl text-black font-normal">
             الحالة العامة للنباتات
           </h1>
@@ -98,7 +98,7 @@ export default function SmartIrrigation() {
           <h1 className="text-center text-xl text-black font-normal">
             نسبة النمو
           </h1>
-          <GrowthRate />
+          {/* <GrowthRate /> */}
           <p>جيدة</p>
         </div>
       </div>
