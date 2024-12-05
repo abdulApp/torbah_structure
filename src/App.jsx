@@ -10,16 +10,17 @@ import Payment from "./pages/Payment";
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
 import SmartIrrigation from "./pages/SmartIrrigation";
+import DashboardNavbar from "./components/DashboardNavbar";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <>
-      <Navbar />
+      <DashboardNavbar />
       <div className="w-screen h-[92vh] mt-[5rem]">
         <div className="w-full h-full flex">
-          <div className="w-[80%] h-full bg-[#eee]">
+          <div className="w-[80%] h-full overflow-auto bg-[#eee]">
             <Routes>
               <Route exact path="/" element={<Home />} />
               <Route exact path="/login" element={<LogIn />} />

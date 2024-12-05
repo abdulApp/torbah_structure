@@ -1,10 +1,11 @@
 import React from "react";
 import HumidityLevels from "../components/HumidityLevels";
 import MineralRatio from "../components/MineralRatio";
+import GrowthRate from "../components/GrowthRate";
 
 export default function SmartIrrigation() {
   return (
-    <div className="w-full h-full flex flex-col gap-8 px-6 py-8">
+    <div className="w-full h-full flex flex-col gap-8 px-6 py-8 mb-4">
       {/* top section */}
       <div className="w-full flex gap-4">
         <div className="w-1/4 flex flex-col gap-3 justify-center items-center px-3 py-6 border rounded-lg bg-white">
@@ -19,33 +20,21 @@ export default function SmartIrrigation() {
         </div>
         <div className="w-1/4 flex flex-col gap-3 justify-center items-center px-3 py-6 border rounded-lg bg-white">
           <p className="text-base font-normal text-[#6C737F]">
-            سرعة واتجاه الرياح <span>icon</span>
+            الرطوبة النسبية <span>icon</span>
           </p>
-          <h1 className="text-center text-xl text-black font-normal">
-            {" "}
-            10 كم/ساعة -️ شرقية <br />
-            (E)
-          </h1>
+          <h1 className="text-center text-xl text-black font-normal">80%</h1>
         </div>
         <div className="w-1/4 flex flex-col gap-3 justify-center items-center px-3 py-6 border rounded-lg bg-white">
           <p className="text-base font-normal text-[#6C737F]">
-            سرعة واتجاه الرياح <span>icon</span>
+            حالة الطقس <span>icon</span>
           </p>
-          <h1 className="text-center text-xl text-black font-normal">
-            {" "}
-            10 كم/ساعة -️ شرقية <br />
-            (E)
-          </h1>
+          <h1 className="text-center text-xl text-black font-normal">غائم</h1>
         </div>
         <div className="w-1/4 flex flex-col gap-3 justify-center items-center px-3 py-6 border rounded-lg bg-white">
           <p className="text-base font-normal text-[#6C737F]">
-            سرعة واتجاه الرياح <span>icon</span>
+            درجة الحرارة الحالية <span>icon</span>
           </p>
-          <h1 className="text-center text-xl text-black font-normal">
-            {" "}
-            10 كم/ساعة -️ شرقية <br />
-            (E)
-          </h1>
+          <h1 className="text-center text-xl text-black font-normal">12 °C</h1>
         </div>
       </div>
       {/* middle section */}
@@ -102,11 +91,81 @@ export default function SmartIrrigation() {
           <h1 className="text-center text-xl text-black font-normal">
             الحالة العامة للنباتات
           </h1>
+          <GrowthRate />
+          <p>جيدة</p>
         </div>
         <div className="w-1/3 flex flex-col gap-3 justify-center items-center px-3 py-6 border rounded-lg bg-white">
           <h1 className="text-center text-xl text-black font-normal">
             نسبة النمو
           </h1>
+          <GrowthRate />
+          <p>جيدة</p>
+        </div>
+      </div>
+
+      {/* bottom section */}
+      <h1 className="text-right text-2xl font-normal">
+        الحالة الصحية العامة للنباتات
+      </h1>
+      <div className="w-full pb-10">
+        <div className="w-full flex flex-col gap-3 justify-center items-center px-3 py-6 border rounded-lg bg-white">
+          <div className="h-full w-full flex justify-between">
+            <p></p>
+            <p>اسم المزرعة</p>
+            <p>الموقع</p>
+            <p>النوع</p>
+            <p>الاسم</p>
+            <p>رقم الحساس</p>
+          </div>
+          <hr className="w-full" />
+          <div className="h-full w-full flex justify-between">
+            <p className="flex gap-6 text-sky-600">
+              <span>حذف</span>
+              <span>تعديل</span>
+            </p>
+            <p>-</p>
+            <p>-</p>
+            <p>SSTV01</p>
+            <p>Sensor01</p>
+            <p>2edd58fd</p>
+          </div>
+          <hr className="w-full" />
+          <div className="h-full w-full flex justify-between">
+            <p className="flex gap-6 text-sky-600">
+              <span>حذف</span>
+              <span>تعديل</span>
+            </p>
+            <p>-</p>
+            <p>-</p>
+            <p>SSTV01</p>
+            <p>Sensor01</p>
+            <p>2edd58fd</p>
+          </div>
+          <hr className="w-full" />
+          <div className="h-full w-full flex justify-between">
+            <p className="flex gap-6 text-sky-600">
+              <span>حذف</span>
+              <span>تعديل</span>
+            </p>
+            <p>-</p>
+            <p>-</p>
+            <p>SSTV01</p>
+            <p>Sensor01</p>
+            <p>2edd58fd</p>
+          </div>
+          <hr className="w-full" />
+          <div className="h-full w-full flex justify-between">
+            <p className="flex gap-6 text-sky-600">
+              <span>حذف</span>
+              <span>تعديل</span>
+            </p>
+            <p>-</p>
+            <p>-</p>
+            <p>SSTV01</p>
+            <p>Sensor01</p>
+            <p>2edd58fd</p>
+          </div>
+          <hr className="w-full" />
         </div>
       </div>
     </div>
