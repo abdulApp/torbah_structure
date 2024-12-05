@@ -2,28 +2,42 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
-import { Route, Routes } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import LogIn from "./pages/Login";
-
-
-
-const About = () => {
-  return (
-    <>
-      <h1>About</h1>
-    </>
-  );
-};
+import Order from "./pages/Order";
+import Payment from "./pages/Payment";
+import Navbar from "./components/Navbar";
+import Sidebar from "./components/Sidebar";
+import SmartIrrigation from "./pages/SmartIrrigation";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <Routes>
-      <Route exact path="/" element={<Home />} />
+    <>
+      <Navbar />
+      <div className="w-screen h-[92vh] mt-[5rem]">
+        <div className="w-full h-full flex">
+          <div className="w-[80%] h-full bg-[#eee]">
+            <Routes>
+              <Route exact path="/" element={<Home />} />
+              <Route exact path="/login" element={<LogIn />} />
+              <Route exact path="/order" element={<Order />} />
+              <Route exact path="/payment" element={<Payment />} />
+              <Route path="/smart-irrigation" element={<SmartIrrigation />} />
+            </Routes>
+          </div>
+          <Sidebar />
+        </div>
+      </div>
+      {/* 
+        <Route exact path="/" element={<Home />} />
       <Route exact path="/login" element={<LogIn />} />
-    </Routes>
+      <Route exact path="/order" element={<Order />} />
+      <Route exact path="/payment" element={<Payment />} /> 
+      */}
+    </>
   );
 }
 
