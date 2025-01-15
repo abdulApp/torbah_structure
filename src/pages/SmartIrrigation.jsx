@@ -1,6 +1,6 @@
 import React from "react";
 import HumidityLevels from "../components/HumidityLevels";
-import MineralRatio from "../components/MineralRatio";
+import MineralRatio from "../components/MineralRatio1";
 import GrowthRate from "../components/GrowthRate";
 
 export default function SmartIrrigation() {
@@ -98,7 +98,7 @@ export default function SmartIrrigation() {
           <h1 className="text-center text-xl text-black font-normal">
             نسبة النمو
           </h1>
-          {/* <GrowthRate /> */}
+          <GrowthRate />
           <p>جيدة</p>
         </div>
       </div>

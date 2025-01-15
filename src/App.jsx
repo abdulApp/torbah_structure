@@ -13,7 +13,7 @@ import SmartIrrigation from "./pages/SmartIrrigation";
 import DashboardNavbar from "./components/DashboardNavbar";
 import Profile from "./pages/Profile";
 import Support from "./pages/Support";
-import Contact from "./sections/Contact";
+import Contact from "./pages/Contact";
 import Alerts from "./pages/Alerts";
 import HealthyPalms from "./pages/HealthyPalms";
 import Footer from "./components/Footer";
