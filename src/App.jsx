@@ -20,33 +20,54 @@ import Footer from "./components/Footer";
 
 function App() {
   const [count, setCount] = useState(0);
+  const [isLogin, setIsLogin] = useState(false);
+  const [isAdmin, setIsAdmin] = useState(true);
 
   return (
     <>
-      <DashboardNavbar />
-      <div className="w-screen h-[85vh] mt-[5rem]">
-        <div className="w-full h-full flex">
-          <div className="w-[80%] h-full overflow-auto overflow-x-hidden bg-[#eee]">
-            <Routes>
-              <Route path="/smart-irrigation" element={<SmartIrrigation />} />
-              <Route path="/profile" element={<Profile />} />
-              <Route path="/support" element={<Support />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/alerts" element={<Alerts />} />
-              <Route path="/healthy-palms" element={<HealthyPalms />} />
-            </Routes>
+      {!isAdmin && isLogin && (
+        <>
+          <DashboardNavbar />
+          <div className="w-screen h-[85vh] mt-[5rem]">
+            <div className="w-full h-full flex">
+              <div className="w-[80%] h-full overflow-auto overflow-x-hidden bg-[#eee]">
+                <Routes>
+                  <Route
+                    path="/"
+                    element={<SmartIrrigation />}
+                  />
+                  <Route path="/profile" element={<Profile />} />
+                  <Route path="/support" element={<Support />} />
+                  <Route path="/contact" element={<Contact />} />
+                  <Route path="/alerts" element={<Alerts />} />
+                  <Route path="/healthy-palms" element={<HealthyPalms />} />
+                </Routes>
+              </div>
+              <Sidebar />
+            </div>
+            <Footer />
           </div>
-          <Sidebar />
-        </div>
-        <Footer />
-      </div>
+        </>
+      )}
 
-      {/* <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route exact path="/login" element={<LogIn />} />
-        <Route exact path="/order" element={<Order />} />
-        <Route exact path="/payment" element={<Payment />} />
-      </Routes> */}
+      {!isLogin && (
+        <>
+          <Routes>
+            <Route exact path="/" element={<Home />} />
+            <Route exact path="/login" element={<LogIn />} />
+            <Route exact path="/order" element={<Order />} />
+            <Route exact path="/payment" element={<Payment />} />
+          </Routes>
+        </>
+      )}
+
+      {isAdmin && isLogin && (
+        <>
+          <Routes>
+            <Route path="/" element={<>hi</>} />
+          </Routes>
+        </>
+      )}
     </>
   );
 }

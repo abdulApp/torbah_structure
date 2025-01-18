@@ -36,7 +36,7 @@ export default function Sidebar() {
           ) : (
             <>
               <Link
-                to="/smart-irrigation"
+                to="/"
                 className="hover:border-b-2 border-sky-800 hover:text-sky-300 hover:bg-sky-500 h-[48px] w-full flex gap-2 justify-end items-center"
               >
                 <button onClick={() => setBtn("Irrigation")}>
