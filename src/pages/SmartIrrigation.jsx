@@ -3,14 +3,20 @@ import HumidityLevels from "../components/HumidityLevels";
 import MineralRatio from "../components/MineralRatio1";
 import GrowthRate from "../components/GrowthRate";
 
+import hugeicon from "../assets/icons/hugeicons_slow-winds.svg";
+import mid from "../assets/icons/mdi_temperature.svg";
+import vector from "../assets/icons/Vector.svg";
+import material from "../assets/icons/material-symbols_humidity-high-outline.svg";
+import VitaminsRatio from "../components/VitaminsRatio";
+
 export default function SmartIrrigation() {
   return (
     <div className="w-full h-full flex flex-col gap-8 px-6 py-8 mb-4">
       {/* top section */}
       <div className="w-full flex gap-4">
         <div className="w-1/4 flex flex-col gap-3 justify-center items-center px-3 py-6 border rounded-lg bg-white">
-          <p className="text-base font-normal text-[#6C737F]">
-            سرعة واتجاه الرياح <span>icon</span>
+          <p className="text-base font-normal text-[#6C737F] inline-flex gap-2">
+            سرعة واتجاه الرياح <img src={hugeicon} alt="" />
           </p>
           <h1 className="text-center text-xl text-black font-normal">
             {" "}
@@ -19,20 +25,20 @@ export default function SmartIrrigation() {
           </h1>
         </div>
         <div className="w-1/4 flex flex-col gap-3 justify-center items-center px-3 py-6 border rounded-lg bg-white">
-          <p className="text-base font-normal text-[#6C737F]">
-            الرطوبة النسبية <span>icon</span>
+        <p className="text-base font-normal text-[#6C737F] inline-flex gap-2">
+            الرطوبة النسبية <img src={material} alt="" />
           </p>
           <h1 className="text-center text-xl text-black font-normal">80%</h1>
         </div>
         <div className="w-1/4 flex flex-col gap-3 justify-center items-center px-3 py-6 border rounded-lg bg-white">
-          <p className="text-base font-normal text-[#6C737F]">
-            حالة الطقس <span>icon</span>
+          <p className="text-base font-normal text-[#6C737F] inline-flex w-full justify-center items-center gap-2">
+            حالة الطقس <img src={vector} alt="" />
           </p>
           <h1 className="text-center text-xl text-black font-normal">غائم</h1>
         </div>
         <div className="w-1/4 flex flex-col gap-3 justify-center items-center px-3 py-6 border rounded-lg bg-white">
-          <p className="text-base font-normal text-[#6C737F]">
-            درجة الحرارة الحالية <span>icon</span>
+          <p className="text-base font-normal text-[#6C737F] inline-flex gap-2">
+            درجة الحرارة الحالية <img src={mid} alt="" />
           </p>
           <h1 className="text-center text-xl text-black font-normal">12 °C</h1>
         </div>
@@ -86,6 +92,7 @@ export default function SmartIrrigation() {
           <h1 className="text-center text-xl text-black font-normal">
             نسبة الفيتامينات
           </h1>
+          <VitaminsRatio />          
         </div>
         <div className="w-1/3 h-[320px] flex flex-col gap-3 justify-center items-center px-3 py-6 border rounded-lg bg-white">
           <h1 className="text-center text-xl text-black font-normal">

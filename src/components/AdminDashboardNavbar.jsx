@@ -6,7 +6,7 @@ import torbahLogo from "../assets/icons/Torbah-logo with text-01.svg";
 import Person from "../assets/icons/person.svg";
 import bell from "../assets/icons/Bell.svg";
 
-const DashboardNavbar = () => {
+const AdminDashboardNavbar = () => {
   // const { loginWithRedirect, logout, user, isLoading } = useAuth0();
   return (
     <header
@@ -22,10 +22,9 @@ const DashboardNavbar = () => {
             </a>
           </div>
           <div className="flex flex-row gap-4 pl-4 text-[#646464] text-[20px]">
-            لوحة المعلومات
+            لوحة معلومات مسؤول النظام
           </div>
           <div className="flex flex-row gap-4">
-            
             <button className="text-[#646464] rounded-xl py-[10px] px-[14px]">
               <img src={bell} alt="" />
             </button>
@@ -36,4 +35,4 @@ const DashboardNavbar = () => {
   );
 };
 
-export default DashboardNavbar;
+export default AdminDashboardNavbar;
