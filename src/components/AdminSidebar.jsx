@@ -63,7 +63,7 @@ export default function AdminSidebar() {
           ) : (
             <>
               <Link
-                to="/healthy-palms"
+                to="/healthy-palms-requests"
                 className="hover:text-sky-300 hover:bg-sky-600 h-[48px] flex justify-end items-center"
               >
                 <button onClick={() => setBtn("healthy-palms")}>
@@ -92,7 +92,7 @@ export default function AdminSidebar() {
             <>
               <button onClick={() => setBtn("notification")}>
                 <Link
-                  to="/alerts"
+                  to="/requests"
                   className="hover:text-sky-300 hover:bg-sky-600 h-[48px] flex justify-end items-center"
                 >
                   <div className="pr-4 inline-flex items-center gap-2">
@@ -107,7 +107,7 @@ export default function AdminSidebar() {
           )}
           {}
           <Link
-            to="/contact"
+            to="/statistics-panel"
             className="hover:text-sky-300 hover:bg-sky-600 h-[48px] flex justify-end items-center"
           >
             <div className="pr-4 inline-flex items-center gap-2">

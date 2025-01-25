@@ -19,6 +19,10 @@ import HealthyPalms from "./pages/HealthyPalms";
 import Footer from "./components/Footer";
 import AdminDashboardNavbar from "./components/AdminDashboardNavbar";
 import AdminSidebar from "./components/AdminSidebar";
+import UserView from "./pages/UserView";
+import SmartIrrigationRequests from "./pages/SmartIrrigationRequests";
+import Requests from "./pages/Requests";
+import StatisticsPanel from "./pages/StatisticsPanel";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -67,12 +71,15 @@ function App() {
             <div className="w-full h-full flex">
               <div className="w-[80%] h-full overflow-auto overflow-x-hidden bg-[#eee]">
                 <Routes>
-                  <Route path="/" element={<SmartIrrigation />} />
+                  <Route path="/" element={<UserView />} />
+                  <Route
+                    path="/healthy-palms-requests"
+                    element={<SmartIrrigationRequests />}
+                  />
+                  <Route path="/requests" element={<Requests />} />
                   <Route path="/profile" element={<Profile />} />
-                  <Route path="/support" element={<Support />} />
-                  <Route path="/contact" element={<Contact />} />
+                  <Route path="/statistics-panel" element={<StatisticsPanel />} />
                   <Route path="/alerts" element={<Alerts />} />
-                  <Route path="/healthy-palms" element={<HealthyPalms />} />
                 </Routes>
               </div>
               <AdminSidebar />
